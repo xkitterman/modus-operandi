@@ -1,0 +1,10 @@
+[user]
+   name = Jordan Kitterman
+   email = xkitterman@gmail.com
+[alias]
+   ci = commit
+   st = status
+   br = branch
+   co = checkout
+[merge]
+   tool = vimdiff
