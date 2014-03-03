@@ -2,10 +2,12 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 syntax on
+filetype plugin indent on
+
+set autoread
 
 let g:netrw_liststyle=3
 let g:netrw_preview=1
-let g:netrw_banner=0
 
 set number
 set ruler
@@ -15,25 +17,35 @@ set cmdheight=3
 " always display status bar
 set laststatus=2
 
+set spelllang=en_us
+
+" default search settings
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+set hidden
+
+set history=1000
+
+set wildmenu
+set wildmode=list:longest
+
+set visualbell
+
+set scrolloff=3
+
 " default tab settings
 set tabstop=3
 set softtabstop=3
 set shiftwidth=3
 set expandtab
 
-set spelllang=en_us
-
-" default search settings
-set ignorecase
-set nowrapscan
-set incsearch
-set hlsearch
-
 if has("autocmd")
-   " enable file type detection
-   filetype on
-
+   " specific settings based on filetype
    autocmd filetype make setlocal ts=2 sts=2 sw=2 noexpandtab
+   autocmd filetype java setlocal ts=4 sts=4 sw=4 
 endif
 
 " convert current word being typed to all caps
@@ -60,7 +72,10 @@ nnoremap <silent> <leader>l :set list!<cr>
 " toggle spell check
 nnoremap <silent> <leader>s :set spell!<cr>
 
-nnoremap <leader>v :tabedit $MYVIMRC<cr>
+nnoremap <leader>e :Explore<cr>
+
+nnoremap <leader>v :vsp $MYVIMRC<cr>
+nnoremap <leader>g :vsp $MYGVIMRC<cr>
 
 command! Source source %
 command! Cd cd %:p:h
