@@ -9,6 +9,12 @@ set autoread
 let g:netrw_liststyle=3
 let g:netrw_preview=1
 
+" terminal colorscheme
+set t_Co=256
+set background=dark
+let g:gruvbox_italic=0
+colorscheme gruvbox
+
 set number
 set ruler
 
@@ -33,13 +39,12 @@ set wildmenu
 set wildmode=list:longest
 
 set visualbell
-
 set scrolloff=3
 
 " default tab settings
-set tabstop=3
-set softtabstop=3
-set shiftwidth=3
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 
 if has("autocmd")
@@ -74,6 +79,7 @@ nnoremap <silent> <leader>s :set spell!<cr>
 
 nnoremap <leader>e :Explore<cr>
 
+nnoremap <leader>w :w<cr>
 nnoremap <leader>v :vsp $MYVIMRC<cr>
 nnoremap <leader>g :vsp $MYGVIMRC<cr>
 

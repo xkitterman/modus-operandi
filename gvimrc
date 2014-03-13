@@ -15,7 +15,8 @@ set guioptions-=b
 
 " syntax color settings
 set background=dark
-colorscheme jellybeans
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
 set columns=999
 set lines=999
@@ -24,7 +25,7 @@ if has("unix")
    " vim settings specific to unix
 
    " font settings
-   set guifont=inconsolata:h16
+   set guifont=inconsolata\ 13
 
 elseif has("win32") || has("win64")
    " vim settings specific to windows
