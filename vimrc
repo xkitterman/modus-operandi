@@ -50,7 +50,9 @@ set expandtab
 if has("autocmd")
    " specific settings based on filetype
    autocmd filetype make setlocal ts=2 sts=2 sw=2 noexpandtab
-   autocmd filetype java setlocal ts=4 sts=4 sw=4 
+   autocmd filetype java setlocal ts=4 sts=4 sw=4
+   autocmd filetype java setlocal omnifunc=javacomplete#Complete
+   autocmd filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
 endif
 
 " convert current word being typed to all caps
