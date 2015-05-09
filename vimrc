@@ -15,6 +15,8 @@ set background=dark
 let g:gruvbox_italic=0
 colorscheme gruvbox
 
+set exrc
+
 set number
 set ruler
 
