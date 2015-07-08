@@ -49,12 +49,15 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+set omnifunc=syntaxcomplete#Complete
+
 if has("autocmd")
    " specific settings based on filetype
    autocmd filetype make setlocal ts=2 sts=2 sw=2 noexpandtab
    autocmd filetype java setlocal ts=4 sts=4 sw=4
    autocmd filetype java setlocal omnifunc=javacomplete#Complete
    autocmd filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
+   autocmd filetype *.cpp,*.hpp,*.cxx setlocal omnifunc=omni#cpp#complete#Main
 endif
 
 " convert current word being typed to all caps
@@ -62,10 +65,6 @@ inoremap <c-u> <esc>gUiwea
 
 " window focus mappings
 noremap <c-w> <c-w>w
-noremap <c-h> <c-w>h
-noremap <c-j> <c-w>j
-noremap <c-k> <c-w>k
-noremap <c-l> <c-w>l
 
 " window movement mappings
 
@@ -86,6 +85,20 @@ nnoremap <leader>e :Explore<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>v :vsp $MYVIMRC<cr>
 nnoremap <leader>g :vsp $MYGVIMRC<cr>
+
+" omnicppcomplete
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1
+let OmniCpp_MayCompleteDot = 1
+let OmniCpp_MayCompleteArrow = 1
+let OmniCpp_MayCompleteScope = 1
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+
+set completeopt=menuone,menu,longest,preview
+
+command! Cpptags !ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .
 
 command! Source source %
 command! Cd cd %:p:h

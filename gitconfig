@@ -13,3 +13,5 @@
     tool = vimdiff
 [init]
 	templatedir = ~/.git_template
+[core]
+	excludesfile = ~/.gitignore
