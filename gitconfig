@@ -9,9 +9,11 @@
     revert = checkout --
     stage = add
     unstage = reset HEAD
+    ctags = !.git/hooks/ctags
 [merge]
     tool = vimdiff
 [init]
-	templatedir = ~/.git_template
+    templatedir = ~/.git_template
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
+    editor = vim
