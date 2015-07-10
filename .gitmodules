@@ -34,3 +34,6 @@
 [submodule "vim/bundle/omnicppcomplete"]
 	path = vim/bundle/omnicppcomplete
 	url = http://github.com/vim-scripts/OmniCppComplete.git
+[submodule "vim/bundle/cmake"]
+	path = vim/bundle/cmake
+	url = http://github.com/vhdirk/vim-cmake.git
