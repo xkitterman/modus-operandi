@@ -37,3 +37,6 @@
 [submodule "vim/bundle/cmake"]
 	path = vim/bundle/cmake
 	url = http://github.com/vhdirk/vim-cmake.git
+[submodule "vim/bundle/vim-gradle"]
+	path = vim/bundle/vim-gradle
+	url = https://github.com/tfnico/vim-gradle.git
