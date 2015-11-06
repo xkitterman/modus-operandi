@@ -43,3 +43,6 @@
 [submodule "vim/bundle/cscope"]
 	path = vim/bundle/cscope
 	url = https://github.com/vim-scripts/cscope.vim.git
+[submodule "vim/bundle/ycm"]
+	path = vim/bundle/ycm
+	url = https://github.com/Valloric/YouCompleteMe
