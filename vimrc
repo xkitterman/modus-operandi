@@ -1,6 +1,12 @@
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+" Hack to resolve the following warning upon vim startup:
+"   DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+if has ("python3")
+    silent! python3 1
+endif
+
 syntax on
 filetype plugin indent on
 
